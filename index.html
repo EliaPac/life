@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:0">
     <title>Home - Elia Paccagnella</title>
+    <link rel="stylesheet" href="style/welcome.css">
+    <link rel="stylesheet" href="style/components.css">
     <link rel="alternate" title="Accept-Language" href="https://eliapaccagnella.design/it/" hreflang="it">
     <link rel="alternate" title="Accept-Language" href="https://eliapaccagnella.design/en/" hreflang="en-US">
     <meta property="og:url" content="THIS PAGE URL">
@@ -13,8 +15,35 @@
     <meta property="og:description" content="DESCRIPTION OF THE PAGE">
     <meta property="og:image" content=".\src\covers\main_cover.jpg">
     <link rel="canonical" href="https://eliapaccagnella.design/">
+    <script>
+        // Redirecting user to website page based on his language preferences
+        var userLang = navigator.language || navigator.userLanguage;
+        console.log(userLang);
+        if (userLang.startsWith('it')) {
+            location.href = 'https://eliapaccagnella.design/it/';
+            location.assign('https://eliapaccagnella.design/it/');
+            location.replace('https://eliapaccagnella.design/it/');
+        }
+        else if (userLang.startsWith('en'))  {
+            location.href = 'https://eliapaccagnella.design/en/';
+            location.assign('https://eliapaccagnella.design/en/');
+            location.replace('https://eliapaccagnella.design/en/');
+        }
+    </script>
 </head>
 <body>
-    <h1>Versione di default</h1>
+    <div id="main-content">
+        <h1 id="welcome" >
+            Welcome<br>
+            <span>Benvenuto</span>
+        </h1>
+        <div id="languages">
+            <p>I'm sorry but this website is not available in your browser language.<br>To continue, choose your one language with wich you feel more comfortable above the following.</p>
+            <div id="buttons">
+                <a href="https://eliapaccagnella.design/en/" class="button main-button">English</a>
+                <a href="https://eliapaccagnella.design/it/" class="button secondary-button">Italian</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
