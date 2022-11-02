@@ -1,11 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 
+:root {
+    /*  WIDTHS  */
+    --wimg1: 20vw;
+    --wimg2: 55vw;
+    --wimg3: 30vw;
+    --wimg4: 18vw;
+    --wimg5: 22vw;
+    --wimg6: 35vw;
+
+    /*  ASPECT RATIOS  */
+    --arimg1: 1;
+    --arimg2: 9/16;
+    --arimg3: 6/16;
+    --arimg4: 1;
+    --arimg5: 7/8;
+    --arimg6: 12/20;
+}
+
 body {
     background-color: #0e0e0e;
-    /* background-image: linear-gradient(37deg, rgba(1,36,0,0) 0%, rgba(14,136,29,0.5) 55%, rgba(0,228,255,1) 100%);
+    background-image: linear-gradient(37deg, rgb(1 36 0 / 0) 0%, rgb(60 101 65 / 0.5) 100%);
     background-repeat: no-repeat;
-    background-attachment: fixed; */
+    background-attachment: fixed;
     color: #fefefe;
     font-family: 'Poppins', sans-serif;
     margin:0;
@@ -45,4 +63,111 @@ body {
 #languages p{
     margin-top: -5vh;
     margin-bottom: 5vh;
+}
+
+#bg-gallery {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#bg-gallery::after {
+    content: "";
+    background-color: rgb(0 0 0 / 0.3);
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-frame{
+    position: absolute;
+    overflow: hidden;
+    margin: 20px;
+    z-index: -1;
+    display: none;
+    background-size: cover;
+    opacity: 0%;
+    background-image: var(--img);
+    animation: fadein-img 2s ease-in-out forwards;
+}
+
+@keyframes fadein-img {
+    0% {
+        scale: 95%;
+        opacity: 0%;
+    }
+    100% {
+        scale: 100%;
+        opacity: 100%;
+    }
+}
+
+.img-frame:nth-of-type(1) {
+    display: block;
+    --height: calc(var(--arimg1) * var(--wimg1));
+    top:10px;
+    left: 10px;
+    width: var(--wimg1);
+    height: var(--height);
+    animation-delay: 3s;
+}
+
+.img-frame:nth-of-type(2) {
+    display: block;
+    --height: calc(var(--arimg2) * var(--wimg2));
+    inset: 0;
+    margin: auto;
+    width: var(--wimg2);
+    height: var(--height);
+}
+
+.img-frame:nth-of-type(3) {
+    display: block;
+    --height: calc(var(--arimg3) * var(--wimg3));
+    inset: 0;
+    margin: auto;
+    top:calc(var(--wimg2)/2);
+    right: calc(var(--arimg2)*var(--wimg2)*1.4);
+    width: var(--wimg3);
+    height: var(--height);
+    animation-delay: 2s;
+}
+
+.img-frame:nth-of-type(4) {
+    display: block;
+    --height: calc(var(--arimg4) * var(--wimg4));
+    bottom:10px;
+    left: 10px;
+    width: var(--wimg4);
+    height: var(--height);
+    animation-delay: 1s;
+}
+
+.img-frame:nth-of-type(5) {
+    display: block;
+    --height: calc(var(--arimg5) * var(--wimg5));
+    top:10px;
+    right: 10px;
+    width: var(--wimg5);
+    height: var(--height);
+    animation-delay: 0.5s;
+}
+
+.img-frame:nth-of-type(6) {
+    display: block;
+    --height: calc(var(--arimg6) * var(--wimg6));
+    bottom:10px;
+    right: 10px;
+    width: var(--wimg6);
+    height: var(--height);
+    animation-delay: 2.5s;
+}
+
+
+
+.img-frame img{
+    display: none;
 }
