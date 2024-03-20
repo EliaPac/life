@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:0">
     <title>Home - Elia Paccagnella</title>
+    <link rel="shortcut icon" href="src/icons/sign.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/general.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/social-links.css">
+    <link rel="stylesheet" href="../style/buttons.css">
+    <link rel="stylesheet" href="../style/slides.css">
+    <link rel="stylesheet" href="../style/home.css">
     <link rel="alternate" title="Accept-Language" href="https://eliapaccagnella.design/en/" hreflang="en-US">
     <meta property="og:url" content="LINK A QUESTA PAGINA">
     <meta property="og:title" content="Home - Elia Paccagnella">
@@ -12,8 +21,111 @@
     <meta property="og:description" content="DESCRIZIONE DELLA PAGINA">
     <meta property="og:image" content="..\src\covers\main_cover.jpg">
     <link rel="canonical" href="https://eliapaccagnella.design/">
+    <script src="../script/nav.js"></script>
 </head>
 <body>
-    <h1>Versione italiana</h1>
+    <!-- INSERT HEADER HERE -->
+    <header>
+        <a href="/" alt="Torna alla Home">
+            <img src="/src/icons/sign.ico" id="header-icon" alt="Firma icona Home" aria-hidden="true"></img>
+        </a>
+        <a href="#" class="cta">Contattami</a>
+    </header>
+    <!-- END OF HEADER -->
+    
+    <!-- INSERT NAVBAR HERE -->
+    <nav data-state="closed">
+        <button class="control-nav" id="nav-controller" onclick="controlNavbar();">
+        </button>
+        <div id="nav" data-state="closed">
+            <p class="nav-title">Menu</p>
+            <ul class="menu">
+                <li class="nav-card active" style="--cover-img: url('/src/covers/main_cover.jpg')">
+                    <a href="#">
+                        <p class="title">
+                            <span class="state-indicator"></span>
+                            Home
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-card" style="--cover-img: url('/src/covers/main_cover.jpg')">
+                    <a href="#">
+                        <p class="title">
+                            <span class="state-indicator"></span>
+                            Chi sono
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-card" style="--cover-img: url('/src/covers/main_cover.jpg')">
+                    <a href="#">
+                        <p class="title">
+                            <span class="state-indicator"></span>
+                            Progetti
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-card" style="--cover-img: url('/src/covers/main_cover.jpg')">
+                    <a href="#">
+                        <p class="title">
+                            <span class="state-indicator"></span>
+                            Contattami
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-card" style="--cover-img: url('/src/covers/main_cover.jpg')">
+                    <a href="#">
+                        <p class="title">
+                            <span class="state-indicator"></span>
+                            Aiutami
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            <footer>
+                <ul>
+                    <li class="social" data-social="facebook">
+                        <a href="#facebook" class="social-link" alt="Link a Facebook">
+                            <span class="hidden" aria-hidden="false">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social" data-social="instagram">
+                        <a href="#instagram" class="social-link" alt="Link a Instagram">
+                            <span class="hidden" aria-hidden="false">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="social" data-social="vero">
+                        <a href="#vero" class="social-link" alt="Link a Vero">
+                            <span class="hidden" aria-hidden="false">Vero</span>
+                        </a>
+                    </li>
+                    <li class="social" data-social="pinterest">
+                        <a href="#pinterest" class="social-link" alt="Link a Pinterest">
+                            <span class="hidden" aria-hidden="false">Pinterest</span>
+                        </a>
+                    </li>
+                    <li class="social" data-social="redbubble">
+                        <a href="#redbubble" class="social-link" alt="Link a RedBubble">
+                            <span class="hidden" aria-hidden="false">RedBubble</span>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <div id="main-container" data-navbar="closed">
+        <section class="slide one">
+            <h1>Benvenuto</h1>
+            <p>Questo è un contenuto di prova esclusivo della pagina italiana index.html</p> 
+        </section>
+        <section class="slide two">
+            <p>Questo è il contenuto di un altra pagina. Provo anche a metterci un bottone</p>
+            <a class="button cta">Premi qui!</a>
+        </section>
+        <section class="slide three">
+            <p>Terza pagina d'esempio caratteristica del file italiano.</p>
+        </section>
+    </div>
 </body>
 </html>

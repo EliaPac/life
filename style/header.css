@@ -1,0 +1,38 @@
+:root {
+    --head-pad-lr: 1.5em;
+    --head-pad-tb: 1.5em;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    /* width: calc(100vw - var(--head-pad-lr)*2); */
+    height: 40px;
+    padding: var(--head-pad-tb) var(--head-pad-lr);
+    background-color: transparent;
+    z-index: 999;
+}
+
+#header-icon {
+    width: 30px;
+    mix-blend-mode: difference;
+}
+
+.cta {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    padding: 2px 15px;
+}
+
+.cta:is(:hover,:active,:focus) {
+    border-color: white;
+    color: white;
+    background-color: transparent;
+}

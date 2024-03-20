@@ -21,14 +21,14 @@
         var userLang = navigator.language || navigator.userLanguage;
         console.log(userLang);
         if (userLang.startsWith('it')) {
-            location.href = 'https://eliapaccagnella.design/it/';
-            location.assign('https://eliapaccagnella.design/it/');
-            location.replace('https://eliapaccagnella.design/it/');
+            location.href = './it/';
+            location.assign('./it/');
+            location.replace('./it/');
         }
         else if (userLang.startsWith('en'))  {
-            location.href = 'https://eliapaccagnella.design/en/';
-            location.assign('https://eliapaccagnella.design/en/');
-            location.replace('https://eliapaccagnella.design/en/');
+            location.href = './en/';
+            location.assign('./en/');
+            location.replace('./en/');
         }
     </script>
 </head>
@@ -39,10 +39,11 @@
             <span>Benvenuto</span>
         </h1>
         <div id="languages">
-            <p>I'm sorry but this website is not available in your browser language.<br>To continue, choose your one language with wich you feel more comfortable above the following.</p>
+            <p lang="en-US">I'm sorry but this website is not available in your browser language. To continue, choose one language with wich you feel more comfortable above the following.</p>
+            <p lang="it">Mi spiace, ma questo sito non è disponibile nella lingua preferita dal tuo browser. Per continuare, scegli la lingua con cui ti senti più a tuo agio tra le seguenti.</p>
             <div id="buttons">
-                <a href="https://eliapaccagnella.design/en/" class="button main-button">English</a>
-                <a href="https://eliapaccagnella.design/it/" class="button secondary-button">Italian</a>
+                <a href="./en/" class="button main-button">English</a>
+                <a href="./it/" class="button secondary-button">Italian</a>
             </div>
         </div>
     </div>
