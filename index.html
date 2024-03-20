@@ -21,6 +21,7 @@
         var userLang = navigator.language || navigator.userLanguage;
         console.log(userLang);
         if (userLang.startsWith('it')) {
+<<<<<<< HEAD
             location.href = 'https://eliapac.github.io/life/it/';
             location.assign('https://eliapac.github.io/life/it/');
             location.replace('https://eliapac.github.io/life/it/');
@@ -29,6 +30,16 @@
             location.href = 'https://eliapac.github.io/life/en/';
             location.assign('https://eliapac.github.io/life/en/');
             location.replace('https://eliapac.github.io/life/en/');
+=======
+            location.href = './it/';
+            location.assign('./it/');
+            location.replace('./it/');
+        }
+        else if (userLang.startsWith('en'))  {
+            location.href = './en/';
+            location.assign('./en/');
+            location.replace('./en/');
+>>>>>>> test
         }
     </script>
 </head>
@@ -39,10 +50,16 @@
             <span>Benvenuto</span>
         </h1>
         <div id="languages">
-            <p>I'm sorry but this website is not available in your browser language.<br>To continue, choose your one language with wich you feel more comfortable above the following.</p>
+            <p lang="en-US">I'm sorry but this website is not available in your browser language. To continue, choose one language with wich you feel more comfortable above the following.</p>
+            <p lang="it">Mi spiace, ma questo sito non è disponibile nella lingua preferita dal tuo browser. Per continuare, scegli la lingua con cui ti senti più a tuo agio tra le seguenti.</p>
             <div id="buttons">
+<<<<<<< HEAD
                 <a href="https://eliapac.github.io/life/en/" class="button main-button">English</a>
                 <a href="https://eliapac.github.io/life/it/" class="button secondary-button">Italian</a>
+=======
+                <a href="./en/" class="button main-button">English</a>
+                <a href="./it/" class="button secondary-button">Italian</a>
+>>>>>>> test
             </div>
         </div>
     </div>

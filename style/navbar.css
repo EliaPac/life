@@ -1,0 +1,155 @@
+:root {
+    --card-width: 30vw;
+    --card-height: 30vh;
+    --accent-color: #1b4332;
+}
+
+body {
+    overflow: hidden;
+}
+
+#main-container {
+    background-image: url('/src/images/DJI_0111\(edit\).jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 2s ease-in-out;
+}
+
+#main-container[data-navbar="closed"] {
+    transform: translateY(0px);
+}
+
+#main-container[data-navbar="opened"] {
+    transform: translateY(-70vh);
+}
+
+.control-nav {
+    --nav-control-color: rgba(100,100,100,0.8);
+    --nav-control-width: 110px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - (var(--nav-control-width)/2));
+    width: var(--nav-control-width);
+    aspect-ratio: 1;
+    border: none;
+    background-color: var(--nav-control-color);
+    border-radius: 50%;
+    background-image: url('/src/icons/sign.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    z-index: 1000;
+    transition: background-color 0.5s ease-in-out,
+                border 0.5s ease-in-out;
+}
+
+nav[data-state="opened"] .control-nav {
+    --nav-control-color: var(--accent-color);
+}
+
+.control-nav:hover {
+    --nav-control-color: var(--accent-color);
+}
+
+@keyframes nav-btn-green {
+    20% {
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
+    to {
+        mix-blend-mode: normal;
+        opacity: 1;
+    }
+}
+
+#nav {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    background-color: #2f2f2f;
+    overflow: hidden;
+    transition: height 2s ease-in-out;
+}
+
+nav[data-state="opened"] #nav {
+    height: 70vh;
+}
+
+nav[data-state="closed"] #nav {
+    height: 0px;
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-family: 'STIX Two Text', serif;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    flex-grow: unset;
+    list-style: none;
+    margin-top: 3vh;
+    padding: 0px;
+    /* Removing scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-card {
+    flex: 0 0 var(--card-width);
+    height: var(--card-height);
+    border-radius: 20px;
+    margin: 0px 10px;
+    background-image: var(--cover-img);
+    background-size: cover;
+    background-position: center;
+    /* padding: 20px; */
+}
+
+.nav-card:nth-of-type(1) {
+    margin: 0px 10px 0px  30px;
+}
+
+.nav-card:nth-last-of-type(1) {
+    margin: 0px 30px 0px  10px;
+}
+
+.nav-card a {
+    --card-padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--main-color);
+    height: calc(100% - var(--card-padding)*2);
+    width: calc(100% - var(--card-padding)*2);
+    border: var(--card-padding) solid transparent;
+}
+
+.nav-card .title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.active .state-indicator {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin-right: 10px;
+}

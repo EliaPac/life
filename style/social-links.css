@@ -1,0 +1,111 @@
+:root {
+    --social-radius: 95px; /*inizializzazione*/
+    --social-width: 40px;
+    --social-gap: calc((var(--social-radius) - (var(--social-width)*2)) / 2);
+}
+
+footer {
+    position: fixed;
+    top: calc(100vh - 95px);
+    left: calc(50dvw - (2 * var(--social-gap)) - (2.5 * var(--social-width)));
+    z-index: 1;
+    pointer-events: none;
+}
+
+footer > ul {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--social-gap);
+}
+
+.social{
+    list-style: none;
+    list-style-type: none;
+    font-size: 0.7em;
+    pointer-events: auto;
+}
+
+.social-link {
+    display: block;
+    width: var(--social-width);
+    aspect-ratio: 1;
+    color: white;
+    text-decoration: none;
+    transition: opacity 500ms ease-out;
+}
+
+nav[data-state="opened"] .social {
+    opacity: 1;
+    --social-radius: 95px;
+    transition: transform 1s ease-in-out 1s,
+    opacity 1000ms ease-in-out 1.5s;
+}
+
+nav[data-state="closed"] .social {
+    opacity: 0;
+    --social-radius: 0px;
+    transition: transform 1s ease-in-out 0.5s,
+    opacity 1000ms ease-in-out 0s;
+}
+
+footer:hover .social-link{
+    opacity: 0.2;
+}
+
+.social:hover .social-link{
+    opacity: 1;
+}
+
+/* 
+nav[data-state="closed"]:hover .social {
+    opacity: 1;
+    --social-radius: 100px;
+    transition: transform 1s ease-in-out 0s,
+    opacity 1s ease-in-out 0.5s;
+}
+*/
+
+.social:nth-child(1) {
+    transform: translate(calc(100px - var(--social-radius)));
+}
+
+.social:nth-child(2) {
+    transform: translate(calc((var(--social-radius) * 0.7) + var(--social-gap) + var(--social-width)),  calc(var(--social-radius) * -0.7));
+}
+
+.social:nth-child(3) {
+    transform: translate(0px, calc(-1 * var(--social-radius)));
+}
+
+.social:nth-child(4) {
+    transform: translate(calc((-1 * var(--social-gap)) - var(--social-width) - (var(--social-radius) * 0.7)),  calc(var(--social-radius) * -0.7));
+}
+
+.social:nth-child(5) {
+    transform: translate(calc(var(--social-radius) - 100px));
+}
+
+.social[data-social="facebook"] .social-link{
+    background-image: url('/src/icons/social/facebook.svg');
+}
+
+.social[data-social="instagram"] .social-link{
+    background-image: url('/src/icons/social/instagram.svg');
+}
+
+.social[data-social="vero"] .social-link{
+    background-image: url('/src/icons/social/vero.svg');
+}
+
+.social[data-social="pinterest"] .social-link{
+    background-image: url('/src/icons/social/pinterest.svg');
+}
+
+.social[data-social="redbubble"] .social-link{
+    background-image: url('/src/icons/social/redbubble.svg');
+}

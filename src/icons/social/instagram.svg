@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 144 144" style="enable-background:new 0 0 144 144;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
+	.st1{clip-path:url(#SVGID_5_);fill:url(#SVGID_6_);}
+	.st2{fill:#FFFFFF;}
+</style>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="72" cy="72" r="72"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<radialGradient id="SVGID_3_" cx="72" cy="72" r="77.7187" fx="23.6745" fy="132.8674" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDD55"/>
+		<stop  offset="9.182348e-02" style="stop-color:#FFA54C"/>
+		<stop  offset="0.1761" style="stop-color:#FF7945"/>
+		<stop  offset="0.2412" style="stop-color:#FF5E41"/>
+		<stop  offset="0.2794" style="stop-color:#FF543F"/>
+		<stop  offset="0.348" style="stop-color:#FC5245"/>
+		<stop  offset="0.504" style="stop-color:#E64771"/>
+		<stop  offset="0.643" style="stop-color:#D53E91"/>
+		<stop  offset="0.761" style="stop-color:#CC39A4"/>
+		<stop  offset="0.841" style="stop-color:#C837AB"/>
+	</radialGradient>
+	<circle class="st0" cx="72" cy="72" r="77.7"/>
+</g>
+<g>
+	<defs>
+		<circle id="SVGID_4_" cx="72" cy="72" r="72"/>
+	</defs>
+	<clipPath id="SVGID_5_">
+		<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
+	</clipPath>
+	<radialGradient id="SVGID_6_" cx="63.8298" cy="77.4468" r="77.7187" fx="-8.0389" fy="47.8649" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#4168C9"/>
+		<stop  offset="0.999" style="stop-color:#4168C9;stop-opacity:0"/>
+	</radialGradient>
+	<circle class="st1" cx="72" cy="72" r="77.7"/>
+</g>
+<path class="st2" d="M54,26.3c-15.2,0-27.7,12.4-27.7,27.7V90c0,15.2,12.4,27.7,27.7,27.7H90c15.2,0,27.7-12.4,27.7-27.7V54
+	c0-15.2-12.4-27.7-27.7-27.7H54z M54,33.5H90c11.3,0,20.4,9.1,20.4,20.4V90c0,11.3-9.1,20.4-20.4,20.4H54
+	c-11.3,0-20.4-9.1-20.4-20.4V54C33.5,42.6,42.6,33.5,54,33.5z M96,43.1c-2.7,0-4.8,2.2-4.8,4.8s2.2,4.8,4.8,4.8
+	c2.7,0,4.8-2.2,4.8-4.8S98.7,43.1,96,43.1z M72,48c-13.2,0-24,10.8-24,24s10.8,24,24,24s24-10.8,24-24S85.2,48,72,48z M72,55.2
+	c9.3,0,16.8,7.5,16.8,16.8S81.3,88.8,72,88.8S55.2,81.3,55.2,72S62.7,55.2,72,55.2z"/>
+</svg>

@@ -1,0 +1,67 @@
+/* SLIDE */
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide {
+    --padding-top: 3em;
+    --padding-right: 0.5em;
+    --padding-bottom: 10em;
+    --padding-left: 0.5em;
+    width: 100%;
+    /* width: calc(100% - var(--padding-left) - var(--padding-right)); */
+    height: 100%;
+    /* height: calc(100% - var(--padding-top) - var(--padding-bottom)); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    container-type: inline-size;
+    scroll-snap-align: start;
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+}
+
+.slide.one {
+    container-name: one;
+    background-image: url('https://www.zankyou.it/images/mag-card-c/a21/02e5/878/623/-/it/wp-content/uploads/2017/05/luca-bravo-o453m2liufs-unsplash-1.jpg');
+}
+
+.slide.two {
+    container-name: two;
+    background-image: url('https://i0.wp.com/viaggiosoloandata.it/wp-content/uploads/2021/03/Immagine-copertina-per-blog-1-2.jpg');
+}
+
+.slide.three {
+    container-name: three;
+    background-image: url('https://ilfotografo.it/wp-content/uploads/2021/07/DCM184.feature.jarrodcastaing_1405145051.jpg');
+}
+
+/* SLIDE SCROLLBAR */
+
+#main-container::-webkit-scrollbar {
+    width:0.3em;
+    height:0.3em;
+}
+
+#main-container::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+#main-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255 255 255 / 0.4);
+    border-radius: 2rem;
+}
+
+#main-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255 255 255 / 0.8);
+}
+
+@supports (scrollbar-color: black, rgba(255 255 255 / 0.3)) {
+    * {
+        scrollbar-color: black, rgba(255 255 255 / 0.3);
+        scrollbar-width: thin;
+    }
+}
